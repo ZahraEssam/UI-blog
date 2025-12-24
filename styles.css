@@ -1,0 +1,295 @@
+:root {
+    --orange: #ff6000;
+    --dark: #242425;
+    --gray: #dadada;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+  padding-top:44px;
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid #eee;
+    height: 72px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 16px;
+    display: flex;
+ }
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding:10px;
+}
+
+.logo {
+    padding:10px;
+}
+.menu {
+    display: flex;
+    gap:24px;
+    padding:15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 100;
+    font-size:14px;
+}
+
+.menu a.active {
+    color: var(--orange);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap:20px;
+}
+
+
+.contact-btn {
+    background: linear-gradient(90deg, #ff6000, #ffa000);
+    border: none;
+    color:white;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(304deg, #242425, #6d6c6d);
+    color: white;
+    padding: 60px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.author-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.breadrumb span {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.author-info h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.author-info h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.description {
+    max-width: 500px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Mobile .. Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .author-image img {
+        width: 250px;
+        height: 250px;
+    }
+    .menu {
+        display: none;
+    }
+}
+
+/* BLOGS SECTION */
+.blogs {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #242425;
+  font-weight: 600;
+}
+
+/* GRID */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* زي الصورة */
+  gap: 32px;
+}
+
+/* CARD */
+.blog-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+.blog-card > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Content */
+.card-content {
+  padding: 24px;
+}
+
+/* Tag */
+.tag {
+  display: inline-block;
+  background: #f4f5f7;
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+/* Titile */
+.card-content p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* Author */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.profile-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Meta */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.meta .dot {
+  font-size: 10px;
+}
+
+/* Read more */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+}
+
+.read-more span {
+  color: #ff6000;
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover span {
+  transform: translateX(4px);
+}
+/*Banner*/
+.dev-banner {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 44px;
+  background:var(--dark);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 12px;
+
+  font-size:14px;
+  z-index: 9999;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid #ff6000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
